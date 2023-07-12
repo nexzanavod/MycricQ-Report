@@ -1,0 +1,22 @@
+.transparent-card {
+    position: relative;
+    margin: 30px;
+    z-index: 0;
+  }
+  
+  .transparent-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    z-index: -1;
+  }
+  .margin{
+    margin: 20px;
+  }
