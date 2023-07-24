@@ -16,17 +16,24 @@ const contentStyle = {
 };
 
 
-const StatsCarousel = () => {
+const StatsCarousel = ({campaignData}) => {
+
+
+    
+  const campaign_data = campaignData?.attributes.leaderboards.data;
+  const length = campaign_data.length;
+
     return (
         <div>
-            <Carousel autoplay>
+            <Carousel autoplay >
                 <div>
-                    <div style={contentStyle}><h1 style={{ textAlign: "center", paddingTop: "25px", color: "yellow" }}>12</h1><h4>Active Players</h4></div>
+                    <div style={contentStyle}><div class='font-bold text-4xl text-center pt-12 text-yellow-300 '>{length} </div>
+                    <div class='font-bold text-xl text-center pt-2 text-green-400'>Active Players</div></div>
                 </div>
                 <div>
                     <h3 style={contentStyle}> <Statistic
                         title="Active"
-                        value={"Narmal"}
+                        value={"coming soon"}
                         precision={2}
                         valueStyle={{
                             color: 'rgb(54, 228, 69)',
