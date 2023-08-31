@@ -22,12 +22,14 @@ function Cards({ campaign }) {
     const player = dataItem.attributes.player;
     const points = dataItem.attributes.points;
     const score = dataItem.attributes.score;
+    const lastPlay = dataItem.attributes.updatedAt;
 
     return {
       mobile: mobile,
       player: player,
       points: points,
       score: score,
+      lastPlay: lastPlay,
     };
   });
 
